@@ -1,0 +1,94 @@
+{
+  "name": "xsmiles-ipywidget",
+  "version": "0.2.2",
+  "description": "A Custom Jupyter Widget Library",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension",
+    "widgets"
+  ],
+  "files": [
+    "assets/rdkit/*.js",
+    "assets/rdkit/*.wasm",
+    "lib/**/*.js",
+    "dist/*.js",
+    "css/*.css"
+  ],
+  "homepage": "https://github.com/Bayer-Group/xsmiles-jupyterlab",
+  "bugs": {
+    "url": "https://github.com/Bayer-Group/xsmiles-jupyterlab/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Henry Heberle"
+  },
+  "main": "lib/index.js",
+  "types": "./lib/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bayer-Group/xsmiles-jupyterlab"
+  },
+  "scripts": {
+    "bundle": "python setup.py sdist bdist_wheel",
+    "build": "yarn run build:lib && yarn run build:nbextension && yarn run build:labextension:dev",
+    "build:prod": "yarn run build:lib && yarn run build:nbextension && yarn run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "build:lib": "tsc",
+    "build:nbextension": "webpack",
+    "clean": "yarn run clean:lib && yarn run clean:nbextension && yarn run clean:labextension",
+    "clean:lib": "rimraf lib",
+    "clean:labextension": "rimraf xsmiles/labextension",
+    "clean:nbextension": "rimraf xsmiles/nbextension/static/index.js",
+    "lint": "eslint . --ext .ts,.tsx --fix",
+    "lint:check": "eslint . --ext .ts,.tsx",
+    "prepack": "yarn run build:lib",
+    "test": "jest",
+    "watch": "npm-run-all -p watch:*",
+    "watch:lib": "tsc -w",
+    "watch:nbextension": "webpack --watch --mode=development",
+    "watch:labextension": "jupyter labextension watch ."
+  },
+  "dependencies": {
+    "@jupyter-widgets/base": "^4.0.0",
+    "@types/jquery": "^3.5.11",
+    "jquery": "^3.6.0",
+    "xsmiles": "file:xsmiles-0.6.5.tgz"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@jupyterlab/builder": "^3.0.0",
+    "@phosphor/application": "^1.6.0",
+    "@phosphor/widgets": "^1.6.0",
+    "@types/webpack-env": "^1.13.6",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.3",
+    "npm-run-all": "^4.1.3",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "style-loader": "^3.3.1",
+    "ts-jest": "^28.0.8",
+    "ts-loader": "^9.3.1",
+    "typescript": "~4.7.4",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "jupyterlab": {
+    "extension": "lib/plugin",
+    "outputDir": "xsmiles/labextension/",
+    "sharedPackages": {
+      "@jupyter-widgets/base": {
+        "bundled": false,
+        "singleton": true
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  // "compilerOptions": {
+  //   // "jsx": "react",
+  //   "jsx": "react-jsx",
+  //   "declaration": true,
+  //   "esModuleInterop":true,
+  //   "lib": ["dom", "dom.iterable", "esnext"],//["es2015", "dom"],
+  //   "module": "commonjs",
+  //   "moduleResolution": "node",
+  //   "noEmitOnError": true,
+  //   "noUnusedLocals": true,
+  //   "outDir": "lib",
+  //   "resolveJsonModule": true,
+  //   "rootDir": "src",
+  //   "skipLibCheck": true,
+  //   "sourceMap": true,
+  //   "strict": true,
+  //   "strictPropertyInitialization": false,
+  //   "target": "es2015",
+  //   "types": ["jest", "node"]
+  // },
+  // "include": [
+  //   "src/**/*.ts",
+  //   "src/**/*.tsx",
+  // ],
+  // "exclude": ["src/**/__tests__"]
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["dom", "dom.iterable", "esnext"], //["es2015", "dom"], // ["dom", "dom.iterable", "esnext"]
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "outDir": "lib",
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "target": "es2015",
+    "types": ["jest", "node"],
+    "jsx": "react-jsx"
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["src/**/__tests__"]
+}
