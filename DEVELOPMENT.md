@@ -15,9 +15,9 @@ conda activate xsmiles-dev
 
 
 # if you can't use conda, try pip:
-python -m venv .venv-xsmiles-ipywidget
-source .venv-xsmiles-ipywidget/bin/activate
-pip install jupyterlab nodejs
+python -m venv .venv-xsmiles
+source .venv-xsmiles/bin/activate
+pip install jupyterlab nodejs jupyter_packaging==0.7.9 wheel
 npm install --global yarn # with sudo? if necessary
 ```
 
