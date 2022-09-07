@@ -48,7 +48,7 @@ package_data_spec = {
 
 
 data_files_spec = [
-    ('share/jupyter/nbextensions/xsmiles', 'xsmiles/nbextension', '**'),
+    ('share/jupyter/nbextensions/xsmiles-ipywidget', 'xsmiles/nbextension', '**'),
     ('share/jupyter/labextensions/xsmiles-ipywidget', 'xsmiles/labextension', '**'),
     ('share/jupyter/labextensions/xsmiles-ipywidget', '.', 'install.json'),
     ('etc/jupyter/nbconfig/notebook.d', '.', 'xsmiles.json'),

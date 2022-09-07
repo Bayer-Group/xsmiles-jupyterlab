@@ -1,5 +1,5 @@
 {
-  "name": "xsmiles",
+  "name": "xsmiles-ipywidget",
   "version": "0.2.2",
   "description": "XSMILES visualizations for JupyterLab notebooks",
   "keywords": [
