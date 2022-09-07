@@ -1,7 +1,7 @@
 {
-  "name": "xsmiles-ipywidget",
+  "name": "xsmiles",
   "version": "0.2.2",
-  "description": "A Custom Jupyter Widget Library",
+  "description": "XSMILES visualizations for JupyterLab notebooks",
   "keywords": [
     "jupyter",
     "jupyterlab",
@@ -54,7 +54,7 @@
     "@jupyter-widgets/base": "^4.0.0",
     "@types/jquery": "^3.5.11",
     "jquery": "^3.6.0",
-    "xsmiles": "file:xsmiles-0.6.5.tgz"
+    "xsmiles": "^0.6.5"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
