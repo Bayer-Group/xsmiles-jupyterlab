@@ -69,6 +69,20 @@ pip install xsmiles # if xsmiles is not in pip yet, try pip install xsmiles-0.2.
 jupyter lab examples/xsmiles_examples.ipynb # run a notebook with jupyter lab
 ```
 
+### Quick example - create environment with python venv
+```bash
+# tested with python 3.8
+python -m venv xsmiles_env
+# activate env
+source ./xsmiles_env/bin/activate
+# install xsmiles
+pip install xsmiles # if xsmiles is not in pip yet, try pip install xsmiles-0.2.2-py2.py3-none-any.whl
+# install dependencies for the example notebook
+pip install jupyterlab rdkit matplotlib 
+
+jupyter lab examples/xsmiles_examples.ipynb
+```
+
 ## Uninstall
 
 - `pip uninstall xsmiles`
