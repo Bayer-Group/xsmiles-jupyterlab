@@ -32,13 +32,13 @@ year = {2022}
 
 - [XSMILES main page](https://github.com/Bayer-Group/xsmiles)
 
-- [TBD Demo website](https://)
+- [Demo website](https://bayer-group.github.io/xsmiles/dist/web/)
 
-- [HOW TO use XSMILES (JupyterLab notebook)](examples/xsmiles_examples.ipynb)
+- [HOW TO use XSMILES with JupyterLab notebook](examples/xsmiles_examples.ipynb)
 
 - [More examples with JupyterLab](https://github.com/Bayer-Group/xsmiles-use-cases)
 
-- [TBD PiPY repository](http://)
+- [Unofficial Pypi repository](https://pypi.org/project/xsmiles/)
 
 - [KNIME component? Check the main page](https://github.com/Bayer-Group/xsmiles)
 
@@ -50,7 +50,7 @@ RDKit MinimalLib is downloaded by your browser.
 
 Please check this notebook to see **how to use** the tool: [Notebook](examples/xsmiles_examples.ipynb)
 
-Note that it is only being tested with **Jupyter Lab**. A reason for you to use Lab is the space available for visualizations, which is much better than in regular Jupyter notebooks. We also had problems with the installation with Jupyter notebooks.
+Note that it is only being tested with Jupyter**Lab**. A reason for you to use Lab is the space available for visualizations, which is much better than in regular Jupyter notebooks. We also had problems with the installation for non-Lab notebooks.
 
 ## Installation
 
@@ -61,12 +61,38 @@ conda create --name xsmiles_env python=3.7 -c conda-forge # create conda env wit
 
 conda activate xsmiles_env # activate the created env
 
-conda install -c conda-forge jupyterlab # install jupyter lab
+# install dependencies for the example notebook
+conda install -c conda-forge jupyterlab rdkit matplotlib
 
-pip install xsmiles # if xsmiles is not in pip yet, try pip install xsmiles-0.2.2-py2.py3-none-any.whl
-# Download the most up to date whl from this repository's releases)
+# You can install the latest official version from this repo with: 
+# pip install xsmiles-0.2.2-py2.py3-none-any.whl
+# Unofficial pypi xsmiles:
+pip install xsmiles 
 
 jupyter lab examples/xsmiles_examples.ipynb # run a notebook with jupyter lab
+```
+
+### Quick example - create environment with python venv
+```bash
+# tested with python 3.8
+python -m venv xsmiles_env
+# activate env
+source ./xsmiles_env/bin/activate
+<<<<<<< HEAD
+# install xsmiles
+pip install xsmiles # if xsmiles is not in pip yet, try pip install xsmiles-0.2.2-py2.py3-none-any.whl
+=======
+
+# You can install the latest official version from this repo with: 
+# pip install xsmiles-0.2.2-py2.py3-none-any.whl
+# Unofficial pypi xsmiles:
+pip install xsmiles
+
+>>>>>>> 236f79d69b387ce022df0e04e36bb90d8643df23
+# install dependencies for the example notebook
+pip install jupyterlab rdkit matplotlib 
+
+jupyter lab examples/xsmiles_examples.ipynb
 ```
 
 ## Uninstall
