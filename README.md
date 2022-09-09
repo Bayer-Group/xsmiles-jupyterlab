@@ -78,17 +78,12 @@ jupyter lab examples/xsmiles_examples.ipynb # run a notebook with jupyter lab
 python -m venv xsmiles_env
 # activate env
 source ./xsmiles_env/bin/activate
-<<<<<<< HEAD
-# install xsmiles
-pip install xsmiles # if xsmiles is not in pip yet, try pip install xsmiles-0.2.2-py2.py3-none-any.whl
-=======
 
 # You can install the latest official version from this repo with: 
 # pip install xsmiles-0.2.2-py2.py3-none-any.whl
 # Unofficial pypi xsmiles:
 pip install xsmiles
 
->>>>>>> 236f79d69b387ce022df0e04e36bb90d8643df23
 # install dependencies for the example notebook
 pip install jupyterlab rdkit matplotlib 
 
