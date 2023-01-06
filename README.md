@@ -28,7 +28,7 @@ issn={1758-2946},
 doi={10.1186/s13321-022-00673-w},
 url={https://doi.org/10.1186/s13321-022-00673-w}
 }
-
+```
 
 ![JupyterLab Notebook](/examples/widget_example.png)
 
