@@ -78,8 +78,8 @@ jupyter lab examples/xsmiles_examples.ipynb # run a notebook with jupyter lab
 
 ### Quick example - create environment with python venv
 ```bash
-# tested with python 3.8
-python -m venv xsmiles_env
+# tested with python 3.9
+python3.9 -m venv xsmiles_env
 # activate env
 source ./xsmiles_env/bin/activate
 
@@ -89,7 +89,7 @@ source ./xsmiles_env/bin/activate
 pip install xsmiles
 
 # install dependencies for the example notebook
-pip install jupyterlab rdkit matplotlib 
+pip install jupyterlab=3.4.5 rdkit=2022.3.5 matplotlib=3.5.3 
 
 jupyter lab examples/xsmiles_examples.ipynb
 ```
