@@ -61,12 +61,10 @@ Note that it is only being tested with Jupyter**Lab**. A reason for you to use L
 ### Quick example - create conda environment and installs xsmiles
 
 ```bash
-conda create --name xsmiles_env python=3.7 -c conda-forge # create conda env with python 3.7
+
+conda create --name xsmiles_env python=3.9 jupyterlab=3.4.5 rdkit=2022.3.5 matplotlib=3.5.3 -c conda-forge
 
 conda activate xsmiles_env # activate the created env
-
-# install dependencies for the example notebook
-conda install -c conda-forge jupyterlab rdkit matplotlib
 
 # You can install the latest official version from this repo with: 
 # pip install xsmiles-0.2.2-py2.py3-none-any.whl
@@ -89,7 +87,7 @@ source ./xsmiles_env/bin/activate
 pip install xsmiles
 
 # install dependencies for the example notebook
-pip install jupyterlab=3.4.5 rdkit=2022.3.5 matplotlib=3.5.3 
+pip install jupyterlab==3.4.5 rdkit==2022.3.5 matplotlib==3.5.3 
 
 jupyter lab examples/xsmiles_examples.ipynb
 ```
